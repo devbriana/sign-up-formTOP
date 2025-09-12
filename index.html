@@ -16,33 +16,34 @@
         </div>
         <form action="/login" method="post" id="form">
             <div id="form-row">
-                <div>
+                <div class="input-div">
                     <label for="name">Full Name*</label>
-                    <input type="text" name="name" id="name" placeholder="Emily Gonzalez">
+                    <input type="text" name="name" id="name" placeholder="Emily Gonzalez" required>
                 </div>
-                <div>
+                <div class="input-div">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" placeholder="Egonzalez@gmail.com">
+                    <input type="email" name="email" id="email" placeholder="Egonzalez@gmail.com" required>
                 </div>
             </div>
             <div id="form-row">
-                <div>
+                <div class="input-div">
                     <label for="phone">Phone Number*</label>
-                    <input type="tel" name="phone" id="phone" placeholder="(777) 777-7777">
+                    <input type="tel" name="phone" id="phone" placeholder="(777) 777-7777" pattern="^(?:\+?1\s?)?(?:\(\d{3}\)|\d{3})[ .-]?\d{3}[ .-]?\d{4}$" required>
                 </div>
-                <div>
+                <div class="input-div">
                     <label for="birthdate">Birth Date (optional)</label>
                     <input type="date" name="birthdate" id="birthdate">
                 </div>
             </div>
             <div id="form-row">
-                <div>
+                <div class="input-div">
                     <label for="password">Password*</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required placeholder="Enter Password" minlength="8">
+                    <span>(min 8 characters)</span>
                 </div>
-                <div>
+                <div class="input-div">
                     <label for="confirm-password">Confirm Password*</label>
-                    <input type="password" name="confirm-password" id="confirm-password">
+                    <input type="password" name="confirm-password" id="confirm-password" required placeholder="confirm-password" minlength="8">
                 </div>
             </div>
             <button type="submit">Create An Account</button>

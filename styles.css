@@ -2,11 +2,13 @@
 
 @import url(https://fonts.bunny.net/css?family=alexandria:300);
 
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 body {
-    margin: 0;
     height: 100vh;
     background-image: url(signin-bg3.jpg);
     background-size: cover;
@@ -14,6 +16,7 @@ body {
     background-position: center;
     display: flex;
     align-items: center;
+    line-height: 1.3;
 }
 
 #church-name {
@@ -54,7 +57,7 @@ body {
 }
 
 #form-header h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
     align-self: center;
     justify-self: center;
     margin-bottom: 0.9rem;
@@ -64,11 +67,11 @@ body {
     font-size: 1.2rem;
     align-self: center;
     justify-self: center;
-    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 #form {
-    margin: 5rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -83,7 +86,6 @@ body {
 #form-row div {
     display: flex;
     flex-direction: column;
-
 }
 
 button {
@@ -92,3 +94,46 @@ button {
     padding: 8px;
     width: 10em;
 }
+
+#form-row label {
+    font-size: 1.1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#form-row input {
+    font-size: 1rem;
+}
+
+#form-row input:focus {
+    outline: solid rgb(49, 57, 50) 2px;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    outline: 2px solid red;
+    background-color: #ffe6e6;
+  }
+
+
+#input-div::after {
+    content: '';
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
+    background-image: url('alert.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    display: none; /* hide initially */
+}
+
+#input-div:has(input:invalid:not(:focus):not(:placeholder-shown))::after {
+    display: block;
+}
+  
+input:required:valid:not(:focus):not(:placeholder-shown) {
+    outline: 2px solid rgb(95, 161, 95);
+    background-color: rgb(224, 245, 224);
+  }
