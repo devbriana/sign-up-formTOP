@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Here</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="church-name">Living Word Church</div>
+    <div id="form-container">
+        <div id="form-header">
+            <h3>Join Us and Stay Connected</h3>
+            <p>Create your account below to access events, sermons, and community updates.</p>
+        </div>
+        <form action="/login" method="post" id="form">
+            <div id="form-row">
+                <div>
+                    <label for="name">Full Name*</label>
+                    <input type="text" name="name" id="name" placeholder="Emily Gonzalez">
+                </div>
+                <div>
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" placeholder="Egonzalez@gmail.com">
+                </div>
+            </div>
+            <div id="form-row">
+                <div>
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" name="phone" id="phone" placeholder="(777) 777-7777">
+                </div>
+                <div>
+                    <label for="birthdate">Birth Date (optional)</label>
+                    <input type="date" name="birthdate" id="birthdate">
+                </div>
+            </div>
+            <div id="form-row">
+                <div>
+                    <label for="password">Password*</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Password*</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                </div>
+            </div>
+            <button type="submit">Create An Account</button>
+        </form>
+        <p>Already have an account?<a href=""> Log in</a></p>
+    </div>
+    
+</body>
+</html>
