@@ -104,6 +104,11 @@ button {
     font-size: 1rem;
 }
 
+#error-message {
+    padding-top: 5px;
+    line-height: 1.5em;
+}
+
 #form-row input:focus {
     outline: solid rgb(49, 57, 50) 2px;
 }
@@ -113,25 +118,26 @@ input:invalid:not(:focus):not(:placeholder-shown) {
     background-color: #ffe6e6;
   }
 
-
-#input-div::after {
-    content: '';
-    position: absolute;
-    right: 0.5em;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1em;
-    height: 1em;
-    background-image: url('alert.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    display: none; /* hide initially */
+.error-icon {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline;
+    vertical-align: middle;
+    display: none;
 }
 
-#input-div:has(input:invalid:not(:focus):not(:placeholder-shown))::after {
-    display: block;
+
+input:invalid:not(:focus):not(:placeholder-shown) + #error-message .error-icon {
+    display: inline;
 }
+
+
+
+input:invalid:not(:focus):not(:placeholder-shown) + #error-message {
+    font-weight: 300;
+    color: rgb(140, 19, 19);
+}
+
   
 input:required:valid:not(:focus):not(:placeholder-shown) {
     outline: 2px solid rgb(95, 161, 95);
