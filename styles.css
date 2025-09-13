@@ -93,6 +93,8 @@ button {
     margin-top: 4em;
     padding: 8px;
     width: 10em;
+    background-color: rgb(110, 79, 110);
+    box-shadow: none;
 }
 
 #form-row label {
@@ -107,12 +109,24 @@ button {
 #error-message {
     padding-top: 5px;
     line-height: 1.5em;
+    display: inline-flex;
+    align-items: center;
+}
+
+#error-message,
+#check-message {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 #form-row input:focus {
     outline: solid rgb(49, 57, 50) 2px;
 }
 
+
+
+/* Invalid styling */
 input:invalid:not(:focus):not(:placeholder-shown) {
     outline: 2px solid red;
     background-color: #ffe6e6;
@@ -121,14 +135,15 @@ input:invalid:not(:focus):not(:placeholder-shown) {
 .error-icon {
     width: 1.5em;
     height: 1.5em;
-    display: inline;
+    background-image: url(alert.svg);
     vertical-align: middle;
     display: none;
+    background-size: contain;
 }
 
 
 input:invalid:not(:focus):not(:placeholder-shown) + #error-message .error-icon {
-    display: inline;
+    display: inline-block;
 }
 
 
@@ -138,8 +153,65 @@ input:invalid:not(:focus):not(:placeholder-shown) + #error-message {
     color: rgb(140, 19, 19);
 }
 
-  
+
+input[type='email']:placeholder-shown + #error-message,
+input[type='tel']:placeholder-shown + #error-message,
+input[id='name']:placeholder-shown + #error-message,
+input[id='phone']:placeholder-shown + #error-message   {
+    display:none
+}
+
+input[type='email']:not(:placeholder-shown) + #error-message,
+input[type='tel']:not(:placeholder-shown) + #error-message,
+input[id='name']:not(:placeholder-shown) + #error-message,
+input[id='phone']:not(:placeholder-shown) + #error-message {
+    display:none
+}
+
+input[type='email']:invalid:not(:focus):not(:placeholder-shown) + #error-message,
+input[type='tel']:invalid:not(:focus):not(:placeholder-shown) + #error-message,
+input[id='name']:invalid:not(:focus):not(:placeholder-shown) + #error-message,
+input[id='phone']:invalid:not(:focus):not(:placeholder-shown) + #error-message {
+    display:inline-block
+}
+
+
+/* Valid styling */
 input:required:valid:not(:focus):not(:placeholder-shown) {
     outline: 2px solid rgb(95, 161, 95);
     background-color: rgb(224, 245, 224);
-  }
+}
+
+.check-icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url(check.svg);
+    vertical-align: middle;
+    display: none;
+    background-size: contain;
+}
+
+#check {
+    display: flex;
+
+}
+
+
+input:required:valid:not(:focus):not(:placeholder-shown) + #error-message{
+    display: none;
+}
+
+input:required:placeholder-shown ~ #check{
+    display: none;
+}
+
+input:required:not(:placeholder-shown) ~ #check{
+    display: none;
+}
+
+input:required:valid:not(:focus):not(:placeholder-shown) ~ #check {
+    display: flex;
+}
+input:required:valid:not(:focus):not(:placeholder-shown) ~ #check .check-icon {
+    display: inline;
+}
