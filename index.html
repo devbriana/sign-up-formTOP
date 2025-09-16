@@ -15,42 +15,39 @@
             <p>Create your account below to access events, sermons, and community updates.</p>
         </div>
         <form action="/login" method="post" id="form">
-            <div id="form-row">
+            <div class="form-row">
                 <div class="input-div">
                     <label for="name">Full Name*</label>
-                    <input type="text" name="name" id="name" placeholder="Emily Gonzalez" required aria-required="true" aria-describedby="name-required" minlength="2">
-                    <span id="error-message">
+                    <input type="text" name="name" id="name" placeholder="First Last" required aria-required="true" aria-describedby="name-required" minlength="2" pattern="^[A-Za-z]+ [A-Za-z]+ ?A-Za-z]+$">
+                    <span class="error-message">
                         <span id="name-required">Enter your full name</span>
                         <span class="error-icon"></span> <!-- icon placeholder -->
-                        <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
-                    <span id="check">
+                    <span class="check">
                         <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
                 </div>
                 <div class="input-div">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" placeholder="Egonzalez@gmail.com" required aria-required="true" aria-describedby="invalid-email">
-                    <span id="error-message">
+                    <input type="email" name="email" id="email" placeholder="Example@gmail.com" required aria-required="true" aria-describedby="invalid-email">
+                    <span class="error-message">
                         <span id="invalid-email">Enter a Valid Email</span>
                         <span class="error-icon"></span> <!-- icon placeholder -->
-                        <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
-                    <span id="check">
+                    <span class="check">
                         <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
                 </div>
             </div>
-            <div id="form-row">
+            <div class="form-row">
                 <div class="input-div">
                     <label for="phone">Phone Number*</label>
-                    <input type="tel" name="phone" id="phone" placeholder="(777) 777-7777" pattern="^(?:\+?1\s?)?(?:\(\d{3}\)|\d{3})[ .-]?\d{3}[ .-]?\d{4}$" required aria-required="true" aria-describedby="invalid-tel" minlength="10">
-                    <span id="error-message">
+                    <input type="tel" name="phone" id="phone" placeholder="777-777-7777" pattern="^\d{10}$|^\d{3}([\s\-\.])\d{3}\1\d{4}$" required aria-required="true" aria-describedby="invalid-tel" minlength="10">
+                    <span class="error-message">
                         <span id="invalid-tel">Enter a Valid Number</span>
                         <span class="error-icon"></span> <!-- icon placeholder -->
-                        <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
-                    <span id="check">
+                    <span class="check">
                         <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
                 </div>
@@ -59,29 +56,28 @@
                     <input type="date" name="birthdate" id="birthdate">
                 </div>
             </div>
-            <div id="form-row">
+            <div class="form-row">
                 <div class="input-div">
                     <label for="password">Password*</label>
                     <input type="password" name="password" id="password" required placeholder="Enter Password" minlength="8" aria-describedby="password-minlength" aria-required="true">
-                    <span id="error-message">
+                    <span class="error-message">
                         <span id="password-minlength">(Minimum of 8 characters)</span>
                         <span class="error-icon"></span> <!-- icon placeholder -->
-                        <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
-                    <span id="check">
-                        <span>(Minimum of 8 characters)</span>
+                    <span class="check">
+                        <span aria-hidden="true">(Minimum of 8 characters)</span>
                         <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
                 </div>
                 <div class="input-div">
                     <label for="confirm-password">Confirm Password*</label>
-                    <input type="password" name="confirm-password" id="confirm-password" required placeholder="confirm-password" minlength="8" aria-describedby="retype-password" aria-required="true">
-                    <span id="error-message">
+                    <input type="password" name="confirm-password" id="confirm-password" required placeholder="Confirm-password" minlength="8" aria-describedby="retype-password" aria-required="true">
+                    <span class="error-message">
                         <span id="retype-password">Retype your password</span>
                         <span class="error-icon"></span> <!-- icon placeholder -->
                     </span>
-                    <span id="check">
-                        <span>Retype your password</span>
+                    <span class="check">
+                        <span aria-hidden="true">Retype your password</span>
                         <span class="check-icon"></span> <!-- icon placeholder -->
                     </span>
                     

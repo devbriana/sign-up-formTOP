@@ -1,19 +1,21 @@
 # sign-up-formTOP
+
 Full Stack JavaScript Course Project: Sign Up Form
 
-background photo 
-Photo by <a href="https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aaron Burden</a> on <a href="https://unsplash.com/photos/silhouette-of-large-cross-during-daytime-JXX380Eg-RI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      signin-bg
+## Basic Sign Up Form Project (No JavaScript Yet)
 
+This is a simple **HTML/CSS sign-up form** created as part of a Full Stack JavaScript course project.  
+Currently, the form **does not include JavaScript**, so validation is limited to built-in HTML5 features (e.g., `required`, `pattern`, `minlength`). Form submission handling is not implemented yet.
 
+The form includes:
+- Full Name, Email, Phone Number, Birth Date (optional), Password, and Confirm Password fields.
+- Visual validation feedback using CSS (`:invalid` and `:valid` styles).
+- ARIA attributes for basic accessibility (`aria-required`, `aria-describedby`, `aria-hidden`).
 
-Photo by <a href="https://unsplash.com/@aaronburden?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aaron Burden</a> on <a href="https://unsplash.com/photos/view-of-cross-during-golden-hour-o--lefJNe0w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      signin-bg2
+### Background Photo
 
-Photo by <a href="https://unsplash.com/@sixteenmilesout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sixteen Miles Out</a> on <a href="https://unsplash.com/photos/green-plant-on-white-book-page-L-mNqn89I2s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      signin-bg3
+1. Photo by [Sixteen Miles Out](https://unsplash.com/@sixteenmilesout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/green-plant-on-white-book-page-L-mNqn89I2s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)  
 
+### Font
 
-
-https://fonts.bunny.net/family/alexandria
-font for church name
+- [Alexandria](https://fonts.bunny.net/family/alexandria) — used for the church name.
